@@ -1,0 +1,317 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:t="sap.ui.table" xmlns:s="sap.m.semantic">
+    <Page id="pagina_detalle_cliente" title="DOCUMENTO Z023">
+        <Panel width="auto">
+            <ObjectHeader binding="{/ClienteModel}" title="Cliente Eventual La Molina">
+                <attributes>
+                    <ObjectAttribute text="000001213242" />
+                </attributes>
+            </ObjectHeader>
+        </Panel>
+        <IconTabBar expanded="{device/isNoPhone}" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter text="Area de Ventas">
+                    <ScrollContainer height="20rem" vertical="true" horizontal="false">
+                        <f:Form>
+                            <f:layout>
+                                <f:ResponsiveGridLayout />
+                            </f:layout>
+                            <f:formContainers>
+                                <f:FormContainer>
+                                    <f:formElements>
+                                        <f:FormElement label="Org. de Ventas">
+                                            <f:fields>
+                                                <Select width="100%" items="{/DataIni/lstCanales}" selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="{Descripcion}" key="{Codigo}" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Canal">
+                                            <f:fields>
+                                                <Select width="100%" selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Oficina">
+                                            <f:fields>
+                                                <Select width="100%" selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                            </f:formContainers>
+                        </f:Form>
+                    </ScrollContainer>
+                </IconTabFilter>
+                <IconTabFilter text="Pago">
+                    <ScrollContainer height="20rem" vertical="true" horizontal="false">
+                        <f:Form>
+                            <f:layout>
+                                <f:ResponsiveGridLayout />
+                            </f:layout>
+                            <f:formContainers>
+                                <f:FormContainer>
+                                    <f:formElements>
+                                        <f:FormElement label="Condición">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Moneda">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Tipo de Cambio">
+                                            <f:fields>
+                                                <Input />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Peso Total">
+                                            <f:fields>
+                                                <Input />
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                            </f:formContainers>
+                        </f:Form>
+                    </ScrollContainer>
+                </IconTabFilter>
+                <IconTabFilter text="Datos Facturación">
+                    <ScrollContainer height="20rem" vertical="true" horizontal="false">
+                        <f:Form>
+                            <f:layout>
+                                <f:ResponsiveGridLayout />
+                            </f:layout>
+                            <f:formContainers>
+                                <f:FormContainer>
+                                    <f:formElements>
+                                        <f:FormElement label="Fecha">
+                                            <f:fields>
+                                                <Input id="txt_fecha_facturacion" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Banco">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Motivo NC/ND">
+                                            <f:fields>
+                                                <Input />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Bloqueo Factura">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Bloqueo Entrega">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                            </f:formContainers>
+                        </f:Form>
+                    </ScrollContainer>
+                </IconTabFilter>
+                <IconTabFilter text="Datos Documento">
+                    <ScrollContainer height="20rem" vertical="true" horizontal="false">
+                        <f:Form>
+                            <f:layout>
+                                <f:ResponsiveGridLayout />
+                            </f:layout>
+                            <f:formContainers>
+                                <f:FormContainer>
+                                    <f:formElements>
+                                        <f:FormElement label="N° Orden de Compra">
+                                            <f:fields>
+                                                <Input />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Fecha pedido">
+                                            <f:fields>
+                                                <DatePicker />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Fecha validez">
+                                            <f:fields>
+                                                <DatePicker />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Fecha ent. Referencil">
+                                            <f:fields>
+                                                <DatePicker placeholder="Ingrese fecha" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Tipo de despacho">
+                                            <f:fields>
+                                                <Select selectedKey="{Country}">
+                                                    <items>
+                                                        <core:Item text="Germany" key="Germany" />
+                                                        <core:Item text="USA" key="USA" />
+                                                        <core:Item text="England" key="England" />
+                                                    </items>
+                                                </Select>
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="Fecha de depacho - Reparto">
+                                            <f:fields>
+                                                <DatePicker />
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                            </f:formContainers>
+                        </f:Form>
+                    </ScrollContainer>
+                </IconTabFilter>
+                <IconTabFilter text="Proyecto y Visita">
+                    <ScrollContainer height="20rem" vertical="true" horizontal="false">
+                        <content>
+                            <f:Form>
+                                <f:layout>
+                                    <f:ResponsiveGridLayout />
+                                </f:layout>
+                                <f:formContainers>
+                                    <f:FormContainer>
+                                        <f:formElements>
+                                            <f:FormElement label="Nombre proyecto">
+                                                <f:fields>
+                                                    <Input />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Codigo Proyecto">
+                                                <f:fields>
+                                                    <Input />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Codigo Version">
+                                                <f:fields>
+                                                    <Input />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Tipo de visita">
+                                                <f:fields>
+                                                    <Select selectedKey="{Country}">
+                                                        <items>
+                                                            <core:Item text="Germany" key="Germany" />
+                                                            <core:Item text="USA" key="USA" />
+                                                            <core:Item text="England" key="England" />
+                                                        </items>
+                                                    </Select>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Visita no reembolsable">
+                                                <f:fields>
+                                                    <Switch type="AcceptReject" state="false" customTextOn="Si" customTextOff="No">
+                                                        <layoutData>
+                                                            <FlexItemData growFactor="1" />
+                                                        </layoutData>
+                                                    </Switch>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Grupo Forecast">
+                                                <f:fields>
+                                                    <Select selectedKey="{Country}">
+                                                        <items>
+                                                            <core:Item text="Germany" key="Germany" />
+                                                            <core:Item text="USA" key="USA" />
+                                                            <core:Item text="England" key="England" />
+                                                        </items>
+                                                    </Select>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Tipo Forecast">
+                                                <f:fields>
+                                                    <Select selectedKey="{Country}">
+                                                        <items>
+                                                            <core:Item text="Germany" key="Germany" />
+                                                            <core:Item text="USA" key="USA" />
+                                                            <core:Item text="England" key="England" />
+                                                        </items>
+                                                    </Select>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="N° de Certificado">
+                                                <f:fields>
+                                                    <Input />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Fecha ent. Referencil">
+                                                <f:fields>
+                                                    <DatePicker />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Tipo de despacho">
+                                                <f:fields>
+                                                    <Select selectedKey="{Country}">
+                                                        <items>
+                                                            <core:Item text="Germany" key="Germany" />
+                                                            <core:Item text="USA" key="USA" />
+                                                            <core:Item text="England" key="England" />
+                                                        </items>
+                                                    </Select>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="Fecha de Visita">
+                                                <f:fields>
+                                                    <DatePicker />
+                                                </f:fields>
+                                            </f:FormElement>
+                                        </f:formElements>
+                                    </f:FormContainer>
+                                </f:formContainers>
+                            </f:Form>
+                        </content>
+                    </ScrollContainer>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</core:FragmentDefinition>

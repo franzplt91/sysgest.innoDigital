@@ -1,0 +1,228 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" controllerName="pe.com.seidor.sap.decor.ventas.controller.Home">
+    <BusyDialog id="loadingControl" />
+    <Page id="pag_principal" title="Menu">
+        <content>
+            <Panel expandable="true" expanded="false" headerText="Documentos" width="auto" class="sapUiResponsiveMargin">
+                <content>
+
+                    
+
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Nuevo" press="goDocNuevo">
+                        <tileContent >
+                            <TileContent footer="Crear nueva cotización o pedido">
+                                <content>
+                                    <NumericContent  icon="sap-icon://create"/>
+                                    <!--<ImageContent src="sap-icon://create" />-->
+                                </content>
+                            </TileContent>
+                        </tileContent>
+
+                        
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Modificar" press="goDocModificar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://write-new-document" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visualizar" press="goDocVisualizar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://hint" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Buscar" press="goDocBuscar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://inspection" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Instalación" press="goDocInstalacion">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://puzzle" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Imprimir" press="goDocImprimir">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://print" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flujo" press="goDocFlujo">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://table-view" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </content>
+            </Panel>
+
+            <Panel expandable="true" expanded="false" headerText="Stock" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock disponible" press="goStockDisponible">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://list" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock por llegar" press="goStockporLlegar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://lateness" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock por pedir" press="goStockporPedir">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://cart" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </content>
+            </Panel>
+
+            <Panel expandable="true" expanded="false" headerText="Reclamos" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Nuevo" press="goRecNuevo">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://create" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Modificar" press="goRecModificar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://write-new-document" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visualizar" press="goRecVisualizar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://hint" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Buscar" press="goRecBuscar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://inspection" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Imprimir" press="goRecImprimir">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://print" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </content>
+            </Panel>
+
+            <Panel expandable="true" expanded="false" headerText="Quejas" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Nuevo" press="goQueNuevo">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://create" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Modificar" press="goQueModificar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://write-new-document" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visualizar" press="goQueVisualizar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://hint" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Buscar" press="goQueBuscar">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://inspection" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Imprimir" press="goQueImprimir">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://print" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </content>
+            </Panel>
+
+
+             <Panel expandable="true" expanded="false" headerText="Usuario" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Información" press="goUsuInformacion">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <ImageContent src="sap-icon://employee" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

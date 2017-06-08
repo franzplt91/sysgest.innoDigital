@@ -1,0 +1,221 @@
+
+<mvc:View
+	height="100%"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	controllerName="pe.com.seidor.sap.decor.ventas.controller.Usuario.UsuInformacion"
+	xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form"
+    xmlns:t="sap.ui.table" 
+    xmlns:s="sap.m.semantic"
+
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+		displayBlock="true">
+
+
+<s:FullscreenPage title="Datos de Usuario"
+                                     showNavButton="true"
+                                     navButtonPress="onNavButtonPress" id="SplitAppId">
+
+                                     <Panel>
+                            <content>
+
+                                <f:Form id="FormChange354"
+            minWidth="1024"
+            maxContainerCols="2"
+            editable="true">
+            <f:title>
+                <core:Title text="Datos Generales" />
+            </f:title>
+            <f:layout>
+                <f:ResponsiveGridLayout
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    columnsL="1"
+                    columnsM="1" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement label="Usuario SAP">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Código de Asesor">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Nombre de Asesor">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Organización de Ventas">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Canal de Ventas">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Correo Electrónico">
+                            <f:fields>
+                                    <Input  ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+
+
+
+
+        <f:Form 
+            minWidth="1024"
+            maxContainerCols="2"
+            editable="true">
+            <f:title>
+                <core:Title text="Cambio de Contraseña" />
+            </f:title>
+            <f:layout>
+                <f:ResponsiveGridLayout
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    columnsL="1"
+                    columnsM="1" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement label="Contraseña Actual">
+                            <f:fields>
+                                    <Input ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Contraseña Nueva">
+                            <f:fields>
+                                    <Input ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        <f:FormElement label="Repetir Contraseña Nueva">
+                            <f:fields>
+                                    <Input ></Input>
+                            </f:fields>
+                        </f:FormElement>
+
+                        
+
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+
+                        
+                            </content>
+                        </Panel>
+                    
+                    <s:customFooterContent>
+                    <Button text="Guardar" icon="sap-icon://save"></Button>
+                </s:customFooterContent>
+                   
+ 
+            </s:FullscreenPage>
+ 
+</mvc:View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Semantic-->
+<!--
+<s:FullscreenPage title="FullScreen Page Title"
+                                     showNavButton="true"
+                                     navButtonPress="onNavButtonPress">
+                    <s:addAction>
+                        <s:AddAction press="onSemanticButtonPress"/>
+                    </s:addAction>
+                    <s:editAction>
+                        <s:EditAction press="onSemanticButtonPress"/>
+                    </s:editAction>
+                    <s:deleteAction>
+                        <s:DeleteAction press="onSemanticButtonPress"/>
+                    </s:deleteAction>
+                    <s:flagAction>
+                        <s:FlagAction press="onSemanticButtonPress"/>
+                    </s:flagAction>
+                    <s:favoriteAction>
+                        <s:FavoriteAction press="onSemanticButtonPress"/>
+                    </s:favoriteAction>
+                    <s:sendEmailAction>
+                        <s:SendEmailAction press="onSemanticButtonPress"/>
+                    </s:sendEmailAction>
+                    <s:sendMessageAction>
+                        <s:SendMessageAction press="onSemanticButtonPress"/>
+                    </s:sendMessageAction>
+                    <s:discussInJamAction>
+                        <s:DiscussInJamAction press="onSemanticButtonPress"/>
+                    </s:discussInJamAction>
+                    <s:shareInJamAction>
+                        <s:ShareInJamAction press="onSemanticButtonPress"/>
+                    </s:shareInJamAction>
+                    <s:printAction>
+                        <s:PrintAction press="onSemanticButtonPress"/>
+                    </s:printAction>
+                    <s:messagesIndicator>
+                        <s:MessagesIndicator press="onMessagesButtonPress"/>
+                    </s:messagesIndicator>
+ 
+                    <s:customFooterContent>
+                        <Button text="CustomFooterBtn" press="onPress"/>
+                        <OverflowToolbarButton icon="sap-icon://settings" text="Settings" press="onPress"/>
+                    </s:customFooterContent>
+ 
+            </s:FullscreenPage>
+
+-->

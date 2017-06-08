@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:t="sap.ui.table" xmlns:s="sap.m.semantic" >
+   <SplitApp>
+        <masterPages>
+            <Page>
+                <headerContent>
+                    <SegmentedButton width="98%" selectedKey="1">
+                        <items>
+                            <SegmentedButtonItem text="DATOS" key="1" />
+                            <SegmentedButtonItem text="PRODUCTOS" key="2" />
+                        </items>
+                    </SegmentedButton>
+                </headerContent>
+                <List width="100%">
+                    <ActionListItem text="Datos del cliente" />
+                    <ActionListItem text="Interlocutores" />
+                    <ActionListItem text="Observaciones" />
+                </List>
+            </Page>
+            <Page>
+                <headerContent>
+                    <SegmentedButton width="98%" selectedKey="1">
+                        <items>
+                            <SegmentedButtonItem text="DATOS" key="1" />
+                            <SegmentedButtonItem text="PRODUCTOS" key="2" />
+                        </items>
+                    </SegmentedButton>
+                </headerContent>
+                <List width="100%">
+                    <ActionListItem text="Producto1" />
+                    <ActionListItem text="Producto2" />
+                    <ActionListItem text="Producto3" />
+                </List>
+            </Page>
+        </masterPages>
+        <detailPages>
+            <core:Fragment fragmentName="pe.com.seidor.sap.decor.ventas.view.fragments.DocClienteFragment" type="XML"> </core:Fragment>
+        </detailPages>
+    </SplitApp>
+</core:FragmentDefinition>

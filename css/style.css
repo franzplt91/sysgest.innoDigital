@@ -1,0 +1,14 @@
+/**
+* author : Daniel Flores
+* CAMPOSOL Theme
+*
+*/
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/montserrat/Montserrat-Regular.otf);
+}
+
+* {
+  /*font-family: Montserrat;*/
+}
